@@ -1,21 +1,21 @@
 {% set name = "deepforest" %}
-{% set version = "0.2.19" %}
-{% set sha256 = "d2121897d6e32db577326f45871990721d835de38805e0547ebaa2ebe4b28dce" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "b5244a5f74c8f1f2b67f7edd7936c09ce1d26642a3c4d4cbd6296b835fa5f8c1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  skip: True  # [win or py<36]
+  skip: true  # [win or py<36]
   number: 0
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [unix]
-    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+    - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   build:
@@ -63,7 +63,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python Package for Tree Crown Detection in Airborne RGB imagery'
+  summary: Python Package for Tree Crown Detection in Airborne RGB imagery
   description: |
     DeepForest is a python package for training and predicting individual
     tree crowns from airborne RGB imagery. DeepForest comes with a prebuilt
