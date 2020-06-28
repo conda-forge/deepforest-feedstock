@@ -1,21 +1,21 @@
 {% set name = "deepforest" %}
-{% set version = "0.2.19" %}
-{% set sha256 = "d2121897d6e32db577326f45871990721d835de38805e0547ebaa2ebe4b28dce" %}
+{% set version = "0.3.2" %}
+{% set sha256 = "04833ba83788c9613beaa23426e6ec20292a5065d8364ce5624b52c8f83f2d25" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  skip: True  # [win or py<36]
+  skip: true  # [win or py<36]
   number: 0
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [unix]
-    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+    - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   build:
@@ -33,7 +33,6 @@ requirements:
     - sphinx
     - recommonmark
     - pyyaml
-    - pytest
     - numpydoc
     - cython >=0.28
     - h5py
@@ -43,31 +42,28 @@ requirements:
     - pillow
     - sphinx_rtd_theme
     - pandas
+    - opencv
     - twine
     - rasterstats
     - psutil
-    - keras==2.3.0
+    - progressbar2
+    - tensorflow ==1.14.0
+    - keras
     - keras-resnet
-    - opencv-python
     - slidingwindow
-    - git+git://github.com/bw4sz/keras-retinanet.git
 
 test:
   imports:
-
+    - deepforest
   source_files:
     - tests/*
-    - requirements.txt
-
-  commands:
-    - {{ PYTHON }} -m pip install -r requirements.txt && pytest -v --ignore=keras-retinanet/    # [unix]
 
 about:
   home: https://github.com/weecology/DeepForest
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python Package for Tree Crown Detection in Airborne RGB imagery'
+  summary: Python Package for Tree Crown Detection in Airborne RGB imagery
   description: |
     DeepForest is a python package for training and predicting individual
     tree crowns from airborne RGB imagery. DeepForest comes with a prebuilt
