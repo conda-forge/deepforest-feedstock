@@ -1,6 +1,6 @@
 {% set name = "deepforest" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "b5244a5f74c8f1f2b67f7edd7936c09ce1d26642a3c4d4cbd6296b835fa5f8c1" %}
+{% set version = "0.3.2" %}
+{% set sha256 = "04833ba83788c9613beaa23426e6ec20292a5065d8364ce5624b52c8f83f2d25" %}
 
 package:
   name: {{ name|lower }}
@@ -33,7 +33,6 @@ requirements:
     - sphinx
     - recommonmark
     - pyyaml
-    - pytest
     - numpydoc
     - cython >=0.28
     - h5py
@@ -43,20 +42,21 @@ requirements:
     - pillow
     - sphinx_rtd_theme
     - pandas
+    - opencv
     - twine
     - rasterstats
     - psutil
+    - progressbar2
+    - tensorflow ==1.14.0
+    - keras
+    - keras-resnet
+    - slidingwindow
 
 test:
   imports:
-
+    - deepforest
   source_files:
     - tests/*
-    - requirements.txt
-
-  commands:
-    - {{ PYTHON }} -m pip install -r requirements.txt && pytest -v --ignore=keras-retinanet/    # [unix]
-    - {{ PYTHON }} -c 'import deepforest; print(deepforest.__version__)'    # [win]
 
 about:
   home: https://github.com/weecology/DeepForest
