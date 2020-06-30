@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  skip: true  # [win or py<36]
-  number: 0
+  skip: true  # [win or py<36 or py>37]
+  number: 1
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [unix]
     - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
