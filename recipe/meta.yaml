@@ -1,6 +1,6 @@
 {% set name = "deepforest" %}
-{% set version = "0.3.7" %}
-{% set sha256 = "8785540d894f98608f64a141d7d96955727bc2d4736a147a1ce8643e88808e15" %}
+{% set version = "0.3.8" %}
+{% set sha256 = "abac9a5e772f7e0f78534b7a327b3f30d6311a4486d527ddf752d16d6dcc275f" %}
 
 package:
   name: {{ name|lower }}
