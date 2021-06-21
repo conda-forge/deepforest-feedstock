@@ -1,6 +1,6 @@
 {% set name = "deepforest" %}
-{% set version = "0.3.8" %}
-{% set sha256 = "abac9a5e772f7e0f78534b7a327b3f30d6311a4486d527ddf752d16d6dcc275f" %}
+{% set version = "1.0.6" %}
+{% set sha256 = "20573cb10050a2acecc52e560b1d4de01a4efae7438c6bc14fe6b790a863a1d0" %}
 
 package:
   name: {{ name|lower }}
@@ -17,44 +17,37 @@ build:
     - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
   host:
     - python
     - pip >=20.1
     - numpy >=1.14.0
-    - cython >=0.28
 
   run:
     - python
-    - matplotlib-base
-    - sphinx
-    - recommonmark
-    - pyyaml
     - numpydoc
-    - cython >=0.28
-    - h5py ==2.10.0
-    - xmltodict
-    - tqdm
-    - {{ pin_compatible('numpy') }}
-    - pillow
-    - sphinx_rtd_theme
+    - h5py
+    - geopandas
     - pandas
-    - opencv
-    - twine
-    - rasterstats
-    - psutil
-    - progressbar2
-    - tensorflow ==1.14.0
-    - keras
-    - keras-resnet
+    - pillow
+    - pip
+    - pytorch_lightning
+    - torch
+    - pyyaml>=5.1.0
+    - pytest
+    - matplotlib
+    - {{ pin_compatible('numpy') }}
+    - recommonmark
+    - rasterio
+    - rtree
+    - sphinx >= 1.8
     - slidingwindow
-
+    - tqdm
+    - torchvision
+    - xmltodict
+    - imagecodecs
 test:
   imports:
     - deepforest
-    - deepforest.keras_retinanet
   source_files:
     - tests/*
 
