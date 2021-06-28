@@ -32,14 +32,14 @@ requirements:
     - pip
     - pytorch_lightning
     - torch
-    - pyyaml>=5.1.0
+    - pyyaml >=5.1.0
     - pytest
     - matplotlib
     - {{ pin_compatible('numpy') }}
     - recommonmark
     - rasterio
     - rtree
-    - sphinx >= 1.8
+    - sphinx >=1.8
     - slidingwindow
     - tqdm
     - torchvision
