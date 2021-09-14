@@ -1,6 +1,6 @@
 {% set name = "deepforest" %}
-{% set version = "1.0.8" %}
-{% set sha256 = "455d06db23077ef5745f09bd24a59d74858c3da0959e4548ebcfe63cdeea160a" %}
+{% set version = "1.1.1" %}
+{% set sha256 = "b9ada406f4d5bb58411cbcdf6814c0c9a0e855c7c12c91db3683d474645f0d0c" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [py<36 or py>37]
-  number: 1
+  number: 0
   script:
     - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
