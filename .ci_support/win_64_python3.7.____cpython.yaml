@@ -1,5 +1,7 @@
 channel_sources:
-- pytorch,conda-forge,defaults
+- conda-forge
+- defaults
+- pytorch
 channel_targets:
 - conda-forge main
 pin_run_as_build:
