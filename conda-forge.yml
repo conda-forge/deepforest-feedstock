@@ -1,8 +1,1 @@
 conda_forge_output_validation: true
-channel_priority: strict
-channels:
-  # sources selects the channels to pull packages from, in order.
-  sources:
-    - pytorch
-    - conda-forge
-    - defaults
