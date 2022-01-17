@@ -30,8 +30,8 @@ requirements:
     - pandas
     - pillow
     - pip
-    - pytorch_lightning
-    - torch
+    - pytorch-lightning
+    - pytorch
     - pyyaml >=5.1.0
     - pytest
     - matplotlib-base
