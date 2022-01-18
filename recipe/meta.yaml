@@ -28,7 +28,7 @@ requirements:
     - pandas
     - pillow
     - pip
-    - pytorch_lightning
+    - pytorch-lightning
     - pytorch
     - pyyaml >=5.1.0
     - pytest
