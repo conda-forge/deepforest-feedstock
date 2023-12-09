@@ -1,5 +1,5 @@
 {% set name = "deepforest" %}
-{% set version = "1.3.0" %}
+{% set version = "1.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b46ae1217020433591c80b02626302f777d078798cdb4e337beaa46c92b41704
+  sha256: d5da51555580595d904dc7417c24a91e6108ae14edad75f21503f74cdfc61aa5
 
 build:
   noarch: python
