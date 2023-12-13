@@ -27,7 +27,7 @@ requirements:
     - imagecodecs
     - matplotlib-base
     - numpydoc
-    - opencv-python >=4.5.4
+    - opencv >=4.5.4
     - pandas
     - pillow >6.2.0
     - pip
