@@ -21,30 +21,33 @@ requirements:
     - pip >=20.1
     - numpy
   run:
-    - python >=3.6
-    - numpydoc
-    - h5py
+    - albumentations>=1.0.0
     - geopandas
-    - pandas
-    - pillow
-    - pip
-    - pytorch-lightning >=1.5.8
-    - pytorch
-    - pyyaml >=5.1.0
-    - pytest
-    - matplotlib-base
-    - {{ pin_compatible('numpy') }}
-    - recommonmark
-    - rasterio
-    - rtree
-    - sphinx >=1.8
-    - slidingwindow
-    - tqdm
-    - torchvision
-    - xmltodict
+    - h5py
     - imagecodecs
-    - albumentations
+    - matplotlib-base
+    - numpydoc
+    - opencv-python>=4.5.4
+    - pandas
+    - pillow>6.2.0
+    - pip
+    - pycocotools
+    - pytest
+    - pytest-profiling
+    - python>=3.6
+    - pytorch
+    - pytorch-lightning>=1.5.8
+    - pyyaml >=5.1.0
+    - rasterio
+    - recommonmark
+    - rtree
     - setuptools <59.6.0
+    - slidingwindow
+    - sphinx
+    - torchvision>=0.13
+    - tqdm
+    - xmltodict
+    - {{ pin_compatible('numpy') }}
 test:
   imports:
     - deepforest
