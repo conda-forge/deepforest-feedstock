@@ -21,22 +21,22 @@ requirements:
     - pip >=20.1
     - numpy
   run:
-    - albumentations>=1.0.0
+    - albumentations >=1.0.0
     - geopandas
     - h5py
     - imagecodecs
     - matplotlib-base
     - numpydoc
-    - opencv-python>=4.5.4
+    - opencv-python >=4.5.4
     - pandas
-    - pillow>6.2.0
+    - pillow >6.2.0
     - pip
     - pycocotools
     - pytest
     - pytest-profiling
-    - python>=3.6
+    - python >=3.6
     - pytorch
-    - pytorch-lightning>=1.5.8
+    - pytorch-lightning >=1.5.8
     - pyyaml >=5.1.0
     - rasterio
     - recommonmark
@@ -44,7 +44,7 @@ requirements:
     - setuptools <59.6.0
     - slidingwindow
     - sphinx
-    - torchvision>=0.13
+    - torchvision >=0.13
     - tqdm
     - xmltodict
     - {{ pin_compatible('numpy') }}
