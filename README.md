@@ -165,5 +165,6 @@ Feedstock Maintainers
 =====================
 
 * [@bw4sz](https://github.com/bw4sz/)
-* [@henrykironde](https://github.com/henrykironde/)
 * [@ethanwhite](https://github.com/ethanwhite/)
+* [@henrykironde](https://github.com/henrykironde/)
+
