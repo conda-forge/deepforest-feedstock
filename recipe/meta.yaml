@@ -44,6 +44,7 @@ requirements:
     - setuptools <59.6.0
     - slidingwindow
     - sphinx
+    - tensorboard
     - torchvision >=0.13
     - tqdm
     - xmltodict
