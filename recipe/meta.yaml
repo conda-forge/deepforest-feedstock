@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 32487ec6047bd8f2fbe181826f749a6ba4496d88e647f604bc91bc2664813425
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip >=20.1
     - numpy
   run:
@@ -34,7 +34,7 @@ requirements:
     - pycocotools
     - pytest
     - pytest-profiling
-    - python >=3.6
+    - python >={{ python_min }}
     - pytorch
     - pytorch-lightning >=1.5.8
     - pyyaml >=5.1.0
@@ -50,6 +50,8 @@ requirements:
     - xmltodict
     - {{ pin_compatible('numpy') }}
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - deepforest
     - deepforest.main
