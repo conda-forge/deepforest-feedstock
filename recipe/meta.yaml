@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script:
     - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -38,7 +38,7 @@ requirements:
     - nbsphinx
     - {{ pin_compatible('numpy') }}
     - numpydoc
-    - opencv-python-headless >=4.5.4
+    - opencv >=4.5.4
     - pandas
     - pillow >6.2.0
     - pip
