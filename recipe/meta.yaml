@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 4
   script:
     - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -58,6 +58,7 @@ requirements:
     - sphinx-design
     - sphinx-markdown-tables
     - sphinx_rtd_theme
+    - supervision
     - torchvision >=0.13
     - tqdm
     - xmltodict
