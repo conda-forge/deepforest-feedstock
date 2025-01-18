@@ -24,15 +24,13 @@ requirements:
     - aiohttp
     - aiolimiter
     - albumentations >=1.0.0
-    - bump-my-version
-    - comet_ml
     - docformatter
     - docutils <0.18
     - geopandas
     - h5py
     - huggingface_hub >=0.25.0
     - imagecodecs
-    - matplotlib-base
+    - matplotlib
     - nbmake
     - nbqa
     - nbsphinx
@@ -42,7 +40,6 @@ requirements:
     - pandas
     - pillow >6.2.0
     - pip
-    - pre-commit
     - pycocotools
     - pydata-sphinx-theme
     - pygments
@@ -51,7 +48,6 @@ requirements:
     - python >={{ python_min }}
     - pytorch
     - pytorch-lightning >=1.5.8
-    - pyyaml >=5.1.0
     - rasterio
     - recommonmark
     - rtree
@@ -62,12 +58,9 @@ requirements:
     - sphinx-design
     - sphinx-markdown-tables
     - sphinx_rtd_theme
-    - tensorboard
     - torchvision >=0.13
     - tqdm
-    - twine
     - xmltodict
-    - yapf
 
 test:
   requires:
