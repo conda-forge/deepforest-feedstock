@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -21,17 +21,31 @@ requirements:
     - pip >=20.1
     - numpy
   run:
+    - aiohttp
+    - aiolimiter
     - albumentations >=1.0.0
+    - bump-my-version
+    - comet_ml
+    - docformatter
+    - docutils <0.18
     - geopandas
     - h5py
+    - huggingface_hub >=0.25.0
     - imagecodecs
     - matplotlib-base
+    - nbmake
+    - nbqa
+    - nbsphinx
+    - {{ pin_compatible('numpy') }}
     - numpydoc
-    - opencv >=4.5.4
+    - opencv-python-headless >=4.5.4
     - pandas
     - pillow >6.2.0
     - pip
+    - pre-commit
     - pycocotools
+    - pydata-sphinx-theme
+    - pygments
     - pytest
     - pytest-profiling
     - python >={{ python_min }}
@@ -41,22 +55,28 @@ requirements:
     - rasterio
     - recommonmark
     - rtree
+    - safetensors
     - setuptools <59.6.0
     - slidingwindow
     - sphinx
+    - sphinx-design
+    - sphinx-markdown-tables
+    - sphinx_rtd_theme
     - tensorboard
     - torchvision >=0.13
     - tqdm
+    - twine
     - xmltodict
-    - {{ pin_compatible('numpy') }}
+    - yapf
+
 test:
   requires:
     - python {{ python_min }}
   imports:
     - deepforest
     - deepforest.main
-  source_files:
-    - tests/*
+  commands:
+    - echo "No tests run on feedstock PR"
 
 about:
   home: https://github.com/weecology/DeepForest
