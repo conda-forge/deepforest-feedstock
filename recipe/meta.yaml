@@ -75,6 +75,7 @@ requirements:
     - twine
     - xmltodict
     - {{ pin_compatible('numpy') }}
+    - python >={{ python_min }}
 
 test:
   requires:
