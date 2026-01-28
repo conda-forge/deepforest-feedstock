@@ -33,7 +33,7 @@ requirements:
     - faster-coco-eval >=1.6.8
     - geopandas
     - h5py
-    - huggingface_hub >=0.25.0
+    - huggingface_hub >=0.34.0
     - hydra-core
     - matplotlib-base
     - myst-parser
