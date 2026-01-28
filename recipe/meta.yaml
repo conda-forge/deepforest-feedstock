@@ -19,12 +19,13 @@ requirements:
   host:
     - python {{ python_min }}
     - pip >=20.1
+    - setuptools
     - numpy <2.0
   run:
     - aiohttp
     - aiolimiter
     - albumentations >=2.0.0
-    - build >=1.3.0
+    - python-build >=1.3.0
     - bump-my-version
     - comet_ml
     - docformatter
@@ -34,7 +35,7 @@ requirements:
     - h5py
     - huggingface_hub >=0.25.0
     - hydra-core
-    - matplotlib
+    - matplotlib-base
     - myst-parser
     - nbmake
     - nbqa
