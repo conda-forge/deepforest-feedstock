@@ -73,7 +73,7 @@ requirements:
     - pytorch >=2.2.0
     - torchvision >=0.17.0
     - tqdm
-    - transformers !=5.1.0,!=4.57"
+    - transformers !=5.1.0,!=4.57
     - twine
     - xmltodict
     - {{ pin_compatible('numpy') }}
