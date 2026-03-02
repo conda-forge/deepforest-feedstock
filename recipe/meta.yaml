@@ -35,7 +35,7 @@ requirements:
     - h5py
     - huggingface_hub >=0.25.0
     - hydra-core
-    - kornia>=0.8.2
+    - kornia >=0.8.2
     - matplotlib-base
     - myst-parser
     - nbmake
