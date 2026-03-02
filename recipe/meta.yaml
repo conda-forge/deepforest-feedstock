@@ -20,7 +20,7 @@ requirements:
     - python {{ python_min }}
     - pip >=20.1
     - setuptools
-    - numpy <2.0
+    - numpy
   run:
     - aiohttp
     - aiolimiter
@@ -33,8 +33,9 @@ requirements:
     - faster-coco-eval >=1.6.8
     - geopandas
     - h5py
-    - huggingface_hub >=0.34.0,<1.0
+    - huggingface_hub >=0.25.0
     - hydra-core
+    - kornia>=0.8.2
     - matplotlib-base
     - myst-parser
     - nbmake
@@ -72,7 +73,7 @@ requirements:
     - pytorch >=2.2.0
     - torchvision >=0.17.0
     - tqdm
-    - transformers <4.57.0
+    - transformers !=5.1.0,!=4.57"
     - twine
     - xmltodict
     - {{ pin_compatible('numpy') }}
