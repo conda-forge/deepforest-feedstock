@@ -25,7 +25,6 @@ requirements:
     - aiohttp
     - aiolimiter
     - albumentations >=2.0.0
-    - python-build >=1.3.0
     - bump-my-version
     - comet-ml
     - docformatter
@@ -54,6 +53,8 @@ requirements:
     - pytest-mock
     - pytest-profiling
     - pytest-xdist
+    - python-build >=1.3.0
+    - pytorch >=2.2.0
     - pytorch-lightning >=2.1.0,<3.0.0
     - pyyaml >=5.1.0
     - rasterio
@@ -70,7 +71,6 @@ requirements:
     - supervision
     - tensorboard
     - timm
-    - pytorch >=2.2.0
     - torchvision >=0.17.0
     - tqdm
     - transformers !=5.1.0,!=4.57
